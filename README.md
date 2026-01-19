@@ -265,7 +265,7 @@ class MedicationItem:
 ### Basic Usage
 
 1. Open the application at `http://localhost:8501`
-2. Use the sidebar or main area to upload prescription images
+2. Use the main area to upload prescription images
 3. Click "Analyze" to process
 4. View results in the Library tab
 
