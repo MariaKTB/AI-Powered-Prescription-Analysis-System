@@ -177,45 +177,33 @@ The application will open in your browser at `http://localhost:8501`
 
 ```
 q-prescriptions/
-├── app.py                          # Main Streamlit application
-├── requirements.txt                # Python dependencies
-├── .env.template                   # Environment variables template
-├── README.md                       # This file
+├── app.py                          # Main Streamlit app
+├── requirements.txt                # Dependencies
+├── .env.template                   # Environment template
+├── README.md                       # Documentation
+├── QUICKSTART.md                   # Documentation
+├── Technical_report.pdf	        # Documentation
 │
-├── core/                           # Core configuration
+├── core/
 │   ├── __init__.py
-│   ├── config.py                   # Configuration management
-│   ├── adaptive_query.py           # Query engine (legacy)
-│   ├── advanced_query.py           # Advanced query (legacy)
-│   ├── export.py                   # Export functionality
-│   └── query.py                    # Query utilities
+│   └── config.py                   # Configuration
+│   └── processor.py                 
 │
-├── extraction/                     # Data extraction modules
+├── extraction/
 │   ├── __init__.py
-│   ├── ocr.py                      # PaddleOCR engine with confidence calculation
-│   ├── ocr_parser.py               # Regex-based fallback parser
-│   ├── llm_extractor.py            # LLM text-to-JSON structuring
-│   ├── vision_extractor.py         # GPT-4o Vision extraction
-│   ├── prescription_processor.py   # Main processing pipeline
-│   ├── pdf_converter.py            # PDF to image conversion
-│   ├── schema.py                   # Pydantic data models
-│   ├── extractor.py                # Base extractor utilities
-│   └── normalizer.py               # Data normalization
+│   ├── ocr.py                      # PaddleOCR with confidence
+│   ├── ocr_parser.py               # Regex fallback
+│   ├── llm_extractor.py            # LLM text structuring
+│   ├── vision_extractor.py         # GPT-4o Vision
+│   ├── prescription_processor.py   # Main pipeline
+│   ├── pdf_converter.py            # PDF support
+│   └── schema.py                   # Pydantic models
 │
-├── storage/                        # Data persistence
-│   ├── __init__.py
-│   └── database.py                 # SQLite database models
-│
-├── ocr/                            # OCR utilities
-│   └── paddle_ocr.py               # PaddleOCR wrapper
-│
-├── tests/                          # Unit tests
-│   └── test_config.py
-│
-└── prescription_dataset/           # Sample prescription images
-    ├── handwriting/                # Handwritten prescriptions (5)
-    ├── mixed/                      # Mixed content prescriptions (17)
-    └── printed/                    # Printed prescriptions (99)
+└── prescription_dataset/           # Your test images
+    ├── handwriting/
+    ├── mixed/
+    └── printed/
+
 ```
 
 ---
