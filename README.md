@@ -321,7 +321,7 @@ combined_confidence = (
 
 ## Academic Context
 
-This project was developed as part of a Master's program in AI/Data Science, demonstrating:
+This project was developed as part of a Data & AI engineering program, demonstrating:
 
 - Integration of OCR and LLM technologies
 - Adaptive processing pipelines
@@ -337,21 +337,10 @@ This project was developed as part of a Master's program in AI/Data Science, dem
 
 ---
 
-## Future Work
-
-- [ ] Multi-language support (French, Arabic)
-- [ ] Drug interaction checking
-- [ ] Integration with pharmacy systems
-- [ ] Batch processing improvements
-- [ ] Mobile camera capture support
-- [ ] Historical prescription tracking
-
----
-
 ## Authors
 
-- **Maria Katibi** - katibimaria@gmail.com
-- **Branly Djime** - branly.djime@gmail.com
+- **Maria Katibi** 
+- **Branly Djime** 
 
 ---
 
@@ -361,12 +350,6 @@ This project was developed as part of a Master's program in AI/Data Science, dem
 - **OpenAI** - GPT-4o and GPT-4o-mini APIs
 - **Streamlit** - Web application framework
 - Academic supervisors and mentors
-
----
-
-## License
-
-This project is licensed under the MIT License.
 
 ---
 
