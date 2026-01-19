@@ -260,36 +260,6 @@ class MedicationItem:
 
 ---
 
-## Dataset
-
-The project includes a dataset of 121 prescription images:
-
-| Category | Count | Description |
-|----------|-------|-------------|
-| **Printed** | 99 | Fully printed prescriptions |
-| **Mixed** | 17 | Printed headers with handwritten medications |
-| **Handwritten** | 5 | Fully handwritten prescriptions |
-
----
-
-## Evaluation Results
-
-### Accuracy Comparison
-
-| Extraction Method | Accuracy | Use Case |
-|-------------------|----------|----------|
-| OCR + Regex (fallback) | ~65-70% | When LLM unavailable |
-| OCR + LLM Text | ~90-95% | Clear printed text |
-| OCR + LLM Vision | ~85-90% | Handwritten/unclear text |
-
-### Key Findings
-
-- **LLM Text structuring** significantly outperforms regex parsing for JSON output
-- **LLM Vision** essential for handwritten content and signature detection
-- **Multi-factor confidence** better predicts when vision is needed than raw OCR confidence alone
-
----
-
 ## Usage Examples
 
 ### Basic Usage
