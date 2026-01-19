@@ -1,0 +1,3 @@
+"""
+DocuVault - Extraction Package
+"""
