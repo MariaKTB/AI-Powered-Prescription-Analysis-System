@@ -36,7 +36,7 @@ Q.Prescription implements a **three-stage adaptive pipeline**:
 2. **Stage 2 - Intelligent Routing**:
    - **High confidence (>60%)**: LLM structures OCR text into JSON (fast, cheap)
    - **Low confidence (<60%)**: LLM Vision analyzes image directly (better for handwriting)
-3. **Stage 3 - Signature Detection**: LLM Vision always analyzes signatures
+3. **Stage 3 - Visual Understanding**: LLM Vision performs holistic visual analysis when required, including handwritten text interpretation, layout understanding, and signature detection.
 
 ---
 
@@ -86,7 +86,7 @@ Upload Image
      +-- < 60%  --> [LLM Vision Analysis] --> JSON
      |
      v
-[Signature Detection] (always LLM Vision)
+[LLM Vision Visual Analysis]
      |
      v
 Structured Prescription Data
@@ -105,7 +105,7 @@ Structured Prescription Data
 | Mode | When Used | Model | Cost |
 |------|-----------|-------|------|
 | **LLM Text** | OCR confidence >= 60% | GPT-4o-mini | Low |
-| **LLM Vision** | OCR confidence < 60% | GPT-4o | Higher |
+| LLM Vision | OCR confidence < 60% or complex visual content | GPT-4o | Higher |
 
 ### 3. Comprehensive Data Extraction
 - **Patient Information**: Name, age, gender, address, phone
@@ -114,15 +114,15 @@ Structured Prescription Data
 - **Medications**: Name, dosage, quantity, frequency, instructions
 - **Signature Analysis**: Presence, legibility, signer name, confidence
 
-### 4. Signature Detection
-- Always uses LLM Vision for reliable signature detection
-- Identifies signature location, legibility, and signer information
-- Reports confidence score for signature presence
+### 4. Visual Analysis (including Signature Detection)
+- LLM Vision performs comprehensive visual understanding of prescriptions
+- Detects handwritten regions, complex layouts, and signatures
+- Identifies signature presence, location, legibility, and signer information
 
 ### 5. Handwriting Analysis
 - Detects handwritten vs printed content
 - Identifies which sections are handwritten
-- Provides LLM interpretation of handwritten text
+- Provides LLM Vision–based interpretation of handwritten text and visually ambiguous regions
 
 ---
 
@@ -138,7 +138,7 @@ Structured Prescription Data
 
 1. **Clone the repository**
 ```bash
-git clone https://github.com/yourusername/q-prescriptions.git
+git clone https://github.com/MariaKTB/q-prescriptions.git
 cd q-prescriptions
 ```
 
